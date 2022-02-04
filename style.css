@@ -1,0 +1,97 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url(fonts/Poppins-Regular.ttf);
+}
+
+body {
+    align-items: center;
+    background-color: #202020;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins';
+    font-size: 25px;
+    gap: 70px;
+    height: 100vh;
+    justify-content: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+h1 {
+    margin: 0px;
+}
+
+button {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.header {
+    color: white;
+}
+
+.round-info {
+    font-size: 30px;
+}
+
+.round-display {
+    display: flex;
+    gap: 40px;
+}
+
+.score {
+    align-items: center;
+    display: flex;
+    font-size: 120px;
+    justify-content: center;
+}
+
+.choice-display {
+    background-color: white;
+    border-radius: 8px;
+    display: flex;
+    font-size: 250px;
+    height: 350px;
+    justify-content: center;
+    width: 350px;
+}
+
+.score {
+    width: 150px;
+}
+
+.choice-container {
+    display: flex;
+    gap: 30px;
+}
+
+.choice {
+    align-items: center;
+    background-color: white;
+    border-radius: 8px;
+    color: black;
+    display: flex;
+    font-size: 80px;
+    height: 120px;
+    justify-content: center;
+    width: 120px;
+}
+
+.choice:hover {
+    transform: scale(0.95);
+    transition: 0.2s;
+    -webkit-box-shadow: 0px 0px 11px 7px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0px 0px 11px 7px rgba(0, 0, 0, 1);
+    box-shadow: 0px 0px 11px 7px rgba(0, 0, 0, 1);
+}
+
+.icon {
+    color: black;
+}
+
+i.icon{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
