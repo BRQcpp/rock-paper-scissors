@@ -42,9 +42,9 @@ function playRound(playerSelection, computerSelection)
     computerScore = document.querySelector('#score-computer').textContent;
 
     if(playerScore == 3)
-        document.querySelector('.round-info').textContent = 'Player won game!'
+        document.querySelector('.round-info').textContent = 'Player won the game!'
     else if(computerScore == 3)
-       document.querySelector('.round-info').textContent = 'Computer won game!'
+       document.querySelector('.round-info').textContent = 'Computer won the game!'
 
 }
 
