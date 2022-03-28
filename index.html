@@ -5,26 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="icons/css/fontello.css">
     <script src="rpssource.js" defer></script>
-    <title>Document</title>
+    <title>Rock Paper Scissors</title>
 </head>
 <body>
     <div class="header"> <h1> Rock Paper Scissors!</h1> </div>
 
-    <span class ="round-info"> Make your choice to start a round! </span>  
+    <div class="round-info">
+        <button class="reset-button"> Reset score </button>
+        <span class ="round-result"> Make your choice to start a round! </span>  
+    </div>
 
     <div class ="round-display"> 
 
         <div class="score" id="score-player"> 0 </div>
 
         <div class="choice-display" id="player-display">
-            <i class="icon-hand-grab-o icon"> </i>
+            <img src="graphics/fist-left.png" class="icon-hand-grab icon"> 
         </div> 
 
-
         <div class="choice-display" id="computer-display">
-            <i class="icon-hand-grab-o icon"> </i>
+            <img src="graphics/fist-right.png" class="icon-hand-grab icon"> 
         </div> 
 
         <div class="score" id="score-computer"> 0 </div>
@@ -34,17 +35,23 @@
     <div class="choice-container">
 
         <div data-number="0" class="choice" role="button">
-            <i class="icon-hand-grab-o icon"> </i>
+            <img src="graphics/fist-small.png" class="icon-hand-grab icon"> 
         </div>
 
         <div data-number="1" class="choice" role="button">
-            <i class="icon-hand-paper-o icon"> </i>
+            <img src="graphics/paper-small.png" class="icon-hand-paper icon"> 
         </div>
 
         <div data-number="2" class="choice" role="button">
-            <i class="icon-hand-scissors-o icon"> </i>
+            <img src="graphics/scissors-small.png" class="icon-hand-scissors icon">
         </div>
 
+    </div>
+
+    <div class="footer"> 
+        <div class="credits">
+            <a href="https://www.flaticon.com/packs/hand-gesture-and-finger-action-1" title="fist icons" target="_blank">Hands icons are all created by Cuputo - Flaticon</a>
+        </div>
     </div>
 
 </body>
