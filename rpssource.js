@@ -85,9 +85,6 @@ function playRound(playerSelection, computerSelection)
 
     if(computerSelection != -1)
     {
-        if(playerScore == 3 || computerScore == 3)
-            playerScore = computerScore = document.querySelector('#score-player').textContent = document.querySelector('#score-computer').textContent = 0;
-        
         if(playerSelection == computerSelection)
             document.querySelector('.round-result').textContent = 'Tie!';
         else if(    (playerSelection == 0 && computerSelection == 2) 
@@ -95,16 +92,13 @@ function playRound(playerSelection, computerSelection)
                 || (playerSelection == 1 && computerSelection == 0)    )
         {
             document.querySelector('.round-result').textContent = 'Player won!';
-            document.querySelector('#score-player').textContent = +playerScore + 1;
+            document.querySelector('#score-player').textContent = +document.querySelector('#score-player').textContent + 1;
         }
         else 
         {
             document.querySelector('.round-result').textContent = 'Computer won!';
-            document.querySelector('#score-computer').textContent = +computerScore + 1;
+            document.querySelector('#score-computer').textContent = +document.querySelector('#score-computer').textContent + 1;
         }
-
-        playerScore = document.querySelector('#score-player').textContent;
-        computerScore = document.querySelector('#score-computer').textContent;
     }
 }
 
