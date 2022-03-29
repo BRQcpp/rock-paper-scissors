@@ -152,6 +152,7 @@ i.icon{
 a, a:visited {
     color: white;
     text-decoration: none;
+    transition: 0.3s;
 }
 
 a:hover {

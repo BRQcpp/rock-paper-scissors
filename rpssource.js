@@ -3,6 +3,7 @@ let computerScore = 0;
 let chooseButtons = document.querySelectorAll('.choice');
 let roundDisplay = document.querySelector('.round-display');
 let chooseDisplays =  roundDisplay.querySelectorAll('.icon');
+let resultDisplays = document.querySelectorAll('.choice-display');
 let resetButton = document.querySelector('.reset-button');
 
 resetButton.addEventListener('click', () => {
@@ -13,6 +14,7 @@ chooseButtons.forEach( (chooseButton) =>
 {
     chooseButton.addEventListener('click', () =>
     {
+        resultDisplays.forEach( (resultDisplay) => resultDisplay.style.removeProperty('box-shadow'));
         playRound(-1, -1);
         setTimeout( () =>
         {
@@ -86,16 +88,23 @@ function playRound(playerSelection, computerSelection)
     if(computerSelection != -1)
     {
         if(playerSelection == computerSelection)
+        {
+            resultDisplays.forEach( (resultDisplay) => resultDisplay.style.setProperty('box-shadow', '0px 0px 15px 0px rgba(169, 169, 169, 1)'));
             document.querySelector('.round-result').textContent = 'Tie!';
-        else if(    (playerSelection == 0 && computerSelection == 2) 
+        }
+        else if(   (playerSelection == 0 && computerSelection == 2) 
                 || (playerSelection == 2 && computerSelection == 1)
                 || (playerSelection == 1 && computerSelection == 0)    )
         {
+            resultDisplays[0].style.setProperty('box-shadow', '0px 0px 15px 0px rgba(85, 255, 85, 1)');
+            resultDisplays[1].style.setProperty('box-shadow', '0px 0px 15px 0px rgba(255, 85, 85, 1)');
             document.querySelector('.round-result').textContent = 'Player won!';
             document.querySelector('#score-player').textContent = +document.querySelector('#score-player').textContent + 1;
         }
         else 
         {
+            resultDisplays[0].style.setProperty('box-shadow', '0px 0px 15px 0px rgba(255, 85, 85, 1)');
+            resultDisplays[1].style.setProperty('box-shadow', '0px 0px 15px 0px rgba(85, 255, 85, 1)');
             document.querySelector('.round-result').textContent = 'Computer won!';
             document.querySelector('#score-computer').textContent = +document.querySelector('#score-computer').textContent + 1;
         }
